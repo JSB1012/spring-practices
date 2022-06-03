@@ -1,6 +1,7 @@
 package com.douzone.hellospring.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -25,8 +26,8 @@ public class BoardController {
 	}
 	
 	@ResponseBody
-	@RequestMapping("/board/view")
-	public String view(int no) {
+	@RequestMapping("/board/view/{no}")
+	public String view(@PathVariable("no")int no) { //path중에 어떤게 변수인가?
 		return "BoardController.view( " + no + ")";
 	}
 
