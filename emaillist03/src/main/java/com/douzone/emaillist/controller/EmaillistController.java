@@ -36,4 +36,9 @@ public class EmaillistController {
 		return "redirect:/";
 	}
 	
+	@RequestMapping(value="/deleteform", method=RequestMethod.GET)
+	public String deleteform() {
+		return "/WEB-INF/views/deleteform.jsp";
+	}
+	
 }
